@@ -6,8 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     </head>
-
-    <body>
+    
+    
+    
+    <body style="background:url({{ asset('images/image02.jpg') }}); background-size:cover; background-color:rgba(255,255,255,0.5);
+    background-blend-mode:lighten;">
+        
+    
 
         {{-- ナビゲーションバー --}}
         @include('commons.navbar')

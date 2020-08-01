@@ -29,12 +29,9 @@
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
                 
-                <div class="form-group">
-                    {!! Form::label('file', 'image', ['class' => 'control-label']) !!}
-                    {!! Form::file('file') !!}  
-                </div>
+                
 
-                {!! Form::submit('登録', ['class' => 'btn btn-primary btn-block']) !!}
+                {!! Form::submit('登録', ['class' => 'btn btn-dark btn-block']) !!}
             {!! Form::close() !!}
         </div>
     </div>

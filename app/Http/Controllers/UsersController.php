@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\User; // 追加
 
+use Image;
+
+use Storage;
+
 class UsersController extends Controller
 {
     //
@@ -83,6 +87,73 @@ class UsersController extends Controller
         return view('users.followers', [
             'user' => $user,
             'users' => $followers,
+        ]);
+    }
+    
+    public function edit($id)
+    {
+        $user = User::findOrFail($id);
+        
+        if (\Auth::id() === $user->id){
+        
+        return view('users.edit', [
+            'user' => $user,
+        ]);
+        }
+        
+        else
+        
+        return redirect('/');
+    }
+    
+    public function update(Request $request, $id)
+    {
+         $request->validate([
+            'name' => 'required|max:255',
+            'image' => 'required',
+        ]);
+        
+        
+        $file = $request->file('image');
+        //$fileName = time()."icon.jpg";
+        
+        //$image = Image::make($file);
+        
+        //$image->resize(300,null,function($constraint){
+        //  $constraint->aspectRatio();
+        //});
+        
+        $file_path= 'images';//.$fileName;
+        //$image->save(public_path().$file_path);
+        
+        $path = Storage::disk('s3')->putFile($file_path, $file, 'public');
+        
+        $user = User::findOrFail($id);
+        $user->name = $request->name; 
+        $user->image = $path;
+        
+        $user->save();
+
+        
+        return redirect('/');
+    }
+    
+    public function favorites($id)
+    {
+        
+         // idの値でユーザを検索して取得
+        $user = User::findOrFail($id);
+
+        // 関係するモデルの件数をロード
+        $user->loadRelationshipCounts();
+
+        // ユーザの投稿一覧を作成日時の降順で取得
+        $favorites = $user->favorites()->orderBy('created_at', 'desc')->paginate(10);
+
+        // ユーザ詳細ビューでそれらを表示
+        return view('users.favorites', [
+            'user' => $user,
+            'posts' => $favorites,
         ]);
     }
 }
