@@ -13,7 +13,7 @@
             <label for="img">アイコン画像</label>
             <input type="file" name="image" id="img">
 
-
+             
           　
           　
           　<div class="form-name">

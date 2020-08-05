@@ -6,6 +6,7 @@
 @else
 {{-- お気に入りボタンのフォーム --}}
 {!! Form::open(['route' => ['favorites.favorite', $post->id]]) !!}
-{!! Form::submit('Favorite', ['class' => "btn btn-info btn-sm"]) !!}
+<button type="submit" class="btn" style="font-size: 30px;"><i class="fas fa-crown"></i></button>
 {!! Form::close() !!}
 @endif
+

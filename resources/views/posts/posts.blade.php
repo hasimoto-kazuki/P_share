@@ -7,10 +7,10 @@
             <li class="media mb-3">
                 @if($user->image == null)
                 {{-- 投稿の所有者のメールアドレスをもとにGravatarを取得して表示 --}}
-                <img class="mr-2 rounded" src="{{ Gravatar::get($post->user->email, ['size' => 50]) }}" alt="">
+                <img class="" src="{{ Gravatar::get($post->user->email, ['size' => 50]) }}" alt="" style="border-radius: 50%;">
         
                 @else
-                <img class="rounded img-fluid" src="{{ Storage::disk('s3')->url($post->user->image) }}" alt="" style="height: 50px; width: 50px;">
+                <img class="" src="{{ Storage::disk('s3')->url($post->user->image) }}" alt="" style="height: 50px; width: 50px; border-radius: 50%;">
                 @endif
                 
                  <div class="media-body">
@@ -32,8 +32,9 @@
                         
                     @include('favorite.favorite_button')
                     
-                    
-                    <div>
+                    <!--追加機能 削除する前の確認機能-->
+                    <div onclick="return Delete_check()" style="margin-top: 15px;">
+                    <!--追加機能ここまで-->
                         @if (Auth::id() == $post->user_id)
                             {{-- 投稿削除ボタンのフォーム --}}
                             {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'delete']) !!}

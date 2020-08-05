@@ -10,15 +10,19 @@
     <div class="card-body">
         @if($user->image == null)
         {{-- ユーザのメールアドレスをもとにGravatarを取得して表示 --}}
-        <img class="mr-2 rounded" src="{{ Gravatar::get($user->email, ['size' => 225]) }}" alt="">
+        <img class="" src="{{ Gravatar::get($user->email, ['size' => 225]) }}" alt="" style="border-radius: 50%;">
         
         @else
-        <img class="rounded img-fluid" src="{{ Storage::disk('s3')->url($user->image) }}" alt="" style="height: 225px; width: 225px">
+        <img class="" src="{{ Storage::disk('s3')->url($user->image) }}" alt="" style="height: 225px; width: 225px; border-radius: 50%;">
         @endif
     </div>
 </div>
 
 </div>
-
+<!--追加機能　余白-->
+<div style="margin-top: 30px;">
+<!--追加機能ここまで-->
 {{-- フォロー／アンフォローボタン --}}
 @include('user_follow.follow_button')
+
+</div>

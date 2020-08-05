@@ -5,6 +5,25 @@
         <title>P_share</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <!--追加機能 削除する前の確認機能-->
+        <script language="JavaScript" type="text/JavaScript"> 
+             
+            function Delete_check(){
+                let checked = confirm("delete?");
+                if (checked == true) {
+                    return true;
+            } else {
+                    return false;
+            }
+          }
+          //追加機能文字数カウント
+          function ShowLength( str ) {
+	            str=str.replace(/\n/g, ""); 
+                document.getElementById("inputlength").innerHTML = ""+ str.length ;
+             }
+
+        </script> 
+        <!--追加機能ここまで-->
     </head>
     
     
