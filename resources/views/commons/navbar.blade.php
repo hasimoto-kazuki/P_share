@@ -1,5 +1,7 @@
 <header class="mb-4">
-    <nav class="navbar navbar-expand-sm navbar-dark" style="background :linear-gradient(to top, #330000 0%, #660000 100%); height :80px;">
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background :linear-gradient(to top, #330000 0%, #660000 100%);">
+        <!--height :80px;-->
+        
         {{-- トップページへのリンク --}}
         <a class="navbar-brand" href="/"><i class="fas fa-home" style="margin-right: 5px;"></i>P_share</a>
         
@@ -35,4 +37,5 @@
         </div>
     </nav>
 </header>
-  
+ 
+ 
