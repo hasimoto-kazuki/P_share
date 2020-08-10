@@ -23,7 +23,7 @@
     {{-- お気に入り一覧タブ --}}
     <li class="nav-item">
         <a style="color: #000011;" href="{{ route('users.favorites', ['id' => $user->id]) }}" class="nav-link {{ Request::routeIs('users.favorites') ? 'active' : '' }}">
-            <i class="fas fa-heart" style="font-size: 20px; color: red;"></i>
+            いいね<i class="fas fa-heart" style="font-size: 20px; color: red;"></i>
             <span class="badge badge-secondary">{{ $user->favorites_count }}</span>
         </a>
     </li>
