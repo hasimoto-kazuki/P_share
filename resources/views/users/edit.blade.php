@@ -18,7 +18,7 @@
           　
           　<div class="form-name">
               <label for="name" class="form-name">名前</label>
-              <input type="text" class="form-control" name="name">
+              <input type="text" class="col-sm-4 form-control" name="name">
             </div>
 
         　　<div class="form-submit">

@@ -26,7 +26,7 @@
     @else    
     <div class="center jumbotron" style="background:url({{ asset('images/image01.jpg') }}); background-size:cover;">
         <div class="text-center">
-            <h1 style="color: white; margin-top: 200px">P_shareへようこそ！</h1>
+            <h1 style="color: white; margin-top: 200px; font-style:oblique;">P_shareへようこそ！</h1>
             
             <h3 style="color: white; margin-top: 100px">ここではあなたの趣味であったり、普段の生活の出来事をつぶやいて<br>
             みんなで共有し合う場所です<br>

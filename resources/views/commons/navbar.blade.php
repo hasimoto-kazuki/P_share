@@ -5,18 +5,27 @@
         {{-- トップページへのリンク --}}
         <a class="navbar-brand" href="/"><i class="fas fa-home" style="margin-right: 5px;"></i>P_share</a>
         
+                    
+
         
 
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="nav-bar">
-            <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav">
+        
                 @if (Auth::check())
+                
+                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
+                    <span class="navbar-toggler-icon"></span>
+                 </button>
+                    
+                    <div class="collapse navbar-collapse" id="nav-bar">
+                    <ul class="navbar-nav mr-auto"></ul>
+                    <ul class="navbar-nav">
+                    
                     {{-- ユーザ一覧ページへのリンク --}}
+                    
                     <li class="nav-item">{!! link_to_route('users.index', 'ユーザー一覧', [], ['class' => 'nav-link']) !!}</li>
+                    
+                    
+                    
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-right">
@@ -31,6 +40,9 @@
                             <li class="dropdown-item">{!! link_to_route('logout.get', 'ログアウト') !!}</li>
                         </ul>
                     </li>
+                
+                
+                
                 
                 @endif
             </ul>

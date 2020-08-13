@@ -19,8 +19,8 @@
         </div>
         
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label" style="padding-top: 0px;">内容：</label> 
-            <div class="col-sm-10"> <!--追加機能文字数カウント-->
+            <label class="col-2 col-form-label" style="padding-top: 0px; padding-right: 0px;">内容</label> 
+            <div class="col-10"> <!--追加機能文字数カウント-->
             <textarea contenteditable class="form-control" onkeyup="ShowLength(value);" name="content" rows="5">{{ old('content') }}</textarea>
             </div>
         </div>
