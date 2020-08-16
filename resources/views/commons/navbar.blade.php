@@ -24,7 +24,9 @@
                     
                     <li class="nav-item">{!! link_to_route('users.index', 'ユーザー一覧', [], ['class' => 'nav-link']) !!}</li>
                     
+                    {{-- ユーザー検索ページへのリンク --}}
                     
+                    <li class="nav-item">{!! link_to_route('search', 'ユーザー検索', [], ['class' => 'nav-link']) !!}</li> 
                     
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>

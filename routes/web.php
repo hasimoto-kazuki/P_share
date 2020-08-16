@@ -43,4 +43,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'edit', 'update']]);
     
     Route::resource('posts', 'PostsController', ['only' => ['store', 'destroy']]);
+    
+    Route::get('search','SearchController@index')->name('search');    //追加
 });
