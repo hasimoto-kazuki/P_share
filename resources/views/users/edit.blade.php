@@ -26,7 +26,7 @@
               <label for="hobby">趣味</label>
               <select name="hobby" style="margin-top: 30px;">
               @foreach(config('hobby') as $key => $name)
-                <option value="{{ $name }}">{{ $name }}</option>
+                <option value="{{ $key }}">{{ $name }}</option>
               @endforeach
               </select>
             </div>
