@@ -111,6 +111,7 @@ class UsersController extends Controller
          $request->validate([
             'name' => 'required|max:255',
             'image' => 'required',
+            'hobby' => 'required',
         ]);
         
         
@@ -131,6 +132,7 @@ class UsersController extends Controller
         $user = User::findOrFail($id);
         $user->name = $request->name; 
         $user->image = $path;
+        $user->hobby = $request->hobby; 
         
         $user->save();
 

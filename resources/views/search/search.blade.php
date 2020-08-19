@@ -13,6 +13,10 @@
                     {!! Form::label('text', 'ユーザ名:') !!}
                     {!! Form::text('name' ,'', ['class' => 'form-control', 'placeholder' => '指定なし'] ) !!}
                 </div>
+                <div class="form-group">
+                    {!! Form::label('hobby', '趣味:') !!}
+                    {!! Form::select('hobby', ['指定なし' => '指定なし'] + Config::get('hobby'), '指定なし') !!}
+                </div>
                 
                 
                 {!! Form::submit('検索', ['class' => 'btn btn-primary btn-block']) !!}
@@ -30,9 +34,9 @@
                         <div class="row  border-bottom text-center">
                             <div class="col-sm-4">
                                 <p>ユーザ名</p>
-                                
-                                
-                                
+                            </div>
+                            <div class="col-sm-4">
+                                <p>趣味</p>
                             </div>
                             
                         </div>
@@ -42,6 +46,9 @@
                                     <div class="col-sm-4">
                                         {{ $user->name }}
                                         
+                                    </div>
+                                    <div class="col-sm-4">
+                                        {{ $user->hobby }}
                                     </div>
                                     
                                 @if($user->image == null)

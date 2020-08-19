@@ -44,11 +44,12 @@
                     </li>
                 
                 
-                
+                </ul>
+            </div>
                 
                 @endif
-            </ul>
-        </div>
+            
+        
     </nav>
 </header>
  

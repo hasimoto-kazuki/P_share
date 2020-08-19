@@ -15,6 +15,13 @@
         @else
         <img class="" src="{{ Storage::disk('s3')->url($user->image) }}" alt="" style="height: 225px; width: 225px; border-radius: 50%;">
         @endif
+        
+        @if($user->hobby == null)
+        <p style="font-size: 30px;">趣味： 選択しない</p>
+        @else
+        <p style="font-size: 30px;">趣味： {{ $user->hobby }}</p>
+        @endif
+        
     </div>
 </div>
 
