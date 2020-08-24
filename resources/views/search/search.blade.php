@@ -48,7 +48,11 @@
                                         
                                     </div>
                                     <div class="col-sm-4">
-                                        {{ $user->hobby }}
+                                    @if($user->hobby == null)
+                                    <p>選択しない</p>
+                                    @else
+                                    <p>{{ $user->hobby }}</p>
+                                    @endif
                                     </div>
                                     
                                 @if($user->image == null)

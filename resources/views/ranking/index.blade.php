@@ -1,5 +1,18 @@
+@extends('layouts.app')
 
 
+
+@section('content')
+
+<div class="row">
+        <aside class="col-sm-4">
+            {{-- ユーザ情報 --}}
+            @include('users.card')
+        </aside>
+        <div class="col-sm-8">
+            
+            
+        
 
 @if (count($posts) > 0)
     <ul class="list-unstyled">
@@ -26,31 +39,20 @@
                         {{-- 投稿画像 --}}
                         <img src="{{ Storage::disk('s3')->url($post->image) }}" style="height: 300px; width: 300px; margin-bottom: 30px;">
                         
-                    </div>
-                    
-                    <div style="display: flex; justify-content: space-between;">
+                        <p><i class="fas fa-crown" style="color: orange; font-size: 25px;"></i><span class="badge badge-secondary" style="font-size: 20px;">{{ $post->favorite_users_count }}</span></p>
                         
-                    @include('favorite.favorite_button')
-                    
-                    <!--追加機能 削除する前の確認機能-->
-                    <div onclick="return Delete_check()" style="margin-top: 15px;">
-                    <!--追加機能ここまで-->
-                        @if (Auth::id() == $post->user_id)
-                            {{-- 投稿削除ボタンのフォーム --}}
-                            {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'delete']) !!}
-                                <button class="btn btn-danger" type="submit">投稿削除</button>
-                            {!! Form::close() !!}
-                        @endif
                     </div>
                     
-                    </div>
+                    
                     
                  </div>
             </li>
         @endforeach
     </ul>
-    {{-- ページネーションのリンク --}}
-    {{ $posts->links() }}
+    
+    
 @endif
+        </div>
+</div>
 
-
+@endsection

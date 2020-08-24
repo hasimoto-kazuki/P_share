@@ -1,6 +1,3 @@
-
-
-
 @extends('layouts.app')
 
 
@@ -39,11 +36,7 @@
             
         </div>
     </div>
-    
     @endif
-    
-    
-    
 @endsection
 
 

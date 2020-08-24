@@ -1,5 +1,7 @@
 <header class="mb-4">
-    <nav class="navbar navbar-expand-sm navbar-dark" style="background :linear-gradient(to top, #330000 0%, #660000 100%);">
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background :linear-gradient(to right, #330000 0%,
+    #330000 10%, #660000 10%, #660000 20%, #330000 20%, #330000 30%, #660000 30%, #660000 40%, #330000 40%, #330000 50%,
+    #660000 50%, #660000 60%, #330000 60%, #330000 70%, #660000 70%, #660000 80%, #330000 80%, #330000 90%, #660000 90%, #660000 100%);">
         <!--height :80px;-->
         
         {{-- トップページへのリンク --}}
@@ -22,11 +24,15 @@
                     
                     {{-- ユーザ一覧ページへのリンク --}}
                     
-                    <li class="nav-item">{!! link_to_route('users.index', 'ユーザー一覧', [], ['class' => 'nav-link']) !!}</li>
+                    <!--<li class="nav-item">{!! link_to_route('users.index', 'ユーザー一覧', [], ['class' => 'nav-link']) !!}</li>-->
                     
                     {{-- ユーザー検索ページへのリンク --}}
                     
-                    <li class="nav-item">{!! link_to_route('search', 'ユーザー検索', [], ['class' => 'nav-link']) !!}</li> 
+                    <li class="nav-item">{!! link_to_route('search', 'ユーザー検索', [], ['class' => 'nav-link']) !!}</li>
+                    
+                    {{-- ランキングページへのリンク --}}
+                    
+                    <li class="nav-item">{!! link_to_route('ranking', 'ランキング', [], ['class' => 'nav-link']) !!}</li> 
                     
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>

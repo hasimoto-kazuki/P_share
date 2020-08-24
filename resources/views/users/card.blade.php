@@ -10,16 +10,18 @@
     <div class="card-body">
         @if($user->image == null)
         {{-- ユーザのメールアドレスをもとにGravatarを取得して表示 --}}
-        <img class="" src="{{ Gravatar::get($user->email, ['size' => 225]) }}" alt="" style="border-radius: 50%;">
+        <img class="rounded img-fluid" src="{{ Gravatar::get($user->email, ['size' => 108]) }}" alt="">
         
         @else
-        <img class="" src="{{ Storage::disk('s3')->url($user->image) }}" alt="" style="height: 225px; width: 225px; border-radius: 50%;">
+        
+        <img class="rounded img-fluid" src="{{ Storage::disk('s3')->url($user->image) }}" alt="" style="height: 108px; width: 108px;">
+        
         @endif
         
         @if($user->hobby == null)
-        <p style="font-size: 30px;">趣味： 選択しない</p>
+        <p style="font-size: 20px;">趣味： 選択しない</p>
         @else
-        <p style="font-size: 30px;">趣味： {{ $user->hobby }}</p>
+        <p style="font-size: 20px;">趣味： {{ $user->hobby }}</p>
         @endif
         
     </div>

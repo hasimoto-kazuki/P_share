@@ -45,4 +45,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('posts', 'PostsController', ['only' => ['store', 'destroy']]);
     
     Route::get('search','SearchController@index')->name('search');    //追加
+    
+    Route::get('ranking','RankingController@index')->name('ranking');    //追加
 });

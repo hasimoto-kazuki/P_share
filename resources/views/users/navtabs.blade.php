@@ -27,4 +27,5 @@
             <span class="badge badge-secondary">{{ $user->favorites_count }}</span>
         </a>
     </li>
+    
 </ul>
