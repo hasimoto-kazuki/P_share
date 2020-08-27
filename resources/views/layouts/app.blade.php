@@ -32,6 +32,22 @@
     <body style="background:url({{ asset('images/image02.jpg') }}) no-repeat center center; background-size:cover; background-color:rgba(255,255,255,0.5);
     background-blend-mode:lighten; background-attachment: fixed;">
     
+    <style>
+        body::before {
+  content: "";
+  background: url(images/image02.jpg) no-repeat center center;
+  background-size: cover;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  transform: translateZ(0);
+}
+    </style>
+    
     
         
     
