@@ -29,7 +29,7 @@
     
     
     
-    <body style="background:url({{ asset('images/image02.jpg') }}); background-size:cover; background-color:rgba(255,255,255,0.5);
+    <body style="background:url({{ asset('images/image02.jpg') }}) no-repeat center center; background-size:cover; background-color:rgba(255,255,255,0.5);
     background-blend-mode:lighten; background-attachment: fixed;">
     
     
