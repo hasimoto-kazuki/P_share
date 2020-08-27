@@ -11,6 +11,8 @@
 
         </div>
         
+        
+        
         <div class="">  <!--追加機能文字数カウント-->
             <div style="display: flex; margin-left: 130px; position: relative;">  
           　<p style="position: absolute; bottom: 0px; margin-bottom: 0px;">Count :</p>
