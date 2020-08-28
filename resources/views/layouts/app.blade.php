@@ -35,7 +35,7 @@
     <style>
         body::before {
   content: "";
-  background: url(images/image02.jpg) no-repeat center center;
+  
   background-size: cover;
   display: block;
   position: fixed;
@@ -45,6 +45,7 @@
   height: 100vh;
   z-index: -1;
   transform: translateZ(0);
+  
 }
     </style>
     
