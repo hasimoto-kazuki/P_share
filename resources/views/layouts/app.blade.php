@@ -35,7 +35,7 @@
     <style>
         body::before {
   content: "";
-  
+  background:url({{ asset('images/image02.jpg') }}) no-repeat center center;
   background-size: cover;
   display: block;
   position: fixed;
