@@ -28,9 +28,9 @@
     </head>
     
     
-    
-    <body style="background:url({{ asset('images/image02.jpg') }}) no-repeat center center; background-size:cover; background-color:rgba(255,255,255,0.5);
-    background-blend-mode:lighten; background-attachment: fixed;">
+    <body>
+    <!--<body style="background:url({{ asset('images/image02.jpg') }}) no-repeat center center; background-size:cover; background-color:rgba(255,255,255,0.5);-->
+    <!--background-blend-mode:lighten; background-attachment: fixed;">-->
     
     <style>
         body::before {
@@ -47,8 +47,7 @@
   height: 100vh;
   z-index: -1;
   transform: translateZ(0);
-  
-}
+  }
     </style>
     
     
