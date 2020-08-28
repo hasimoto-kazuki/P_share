@@ -36,6 +36,8 @@
         body::before {
   content: "";
   background:url({{ asset('images/image02.jpg') }}) no-repeat center center;
+  background-color:rgba(255,255,255,0.5);
+  background-blend-mode:lighten;
   background-size: cover;
   display: block;
   position: fixed;
